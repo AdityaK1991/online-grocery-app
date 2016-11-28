@@ -1,0 +1,13 @@
+<div ng-controller="CustomerInfoCtrl">
+<div ng-hide="editorEnabled">
+  {{ title }}
+  <a href="#" ng-click="enableEditor()">Edit title</a>
+</div>
+<div ng-show="editorEnabled">
+  <input ng-model="editableTitle" ng-show="editorEnabled">
+  <a href="#/customer-info" ng-click="save()">Save</a>
+  or
+  <a href="#/customer-info" ng-click="disableEditor()">Cancel</a>.
+</div>
+
+</div>

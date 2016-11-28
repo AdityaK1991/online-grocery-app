@@ -1,0 +1,42 @@
+<div class="container">
+
+<!-- <ng-include src="'views/carousel.html'"> </ng-include> -->
+
+<div class="row" >
+  <div class="col-md-6 col-md-offset-3">
+    <div class="thumbnail">
+      <!-- <a href="#"> -->
+        <img src="images/yeoman.png" class="img-responsive" alt="...">
+        <div class="caption">
+          <h5>Thumbnail label</h5>
+        </div>
+      <!-- </a> -->
+    </div>
+  </div>
+</div>
+
+<p>Price: {{ pPrice }}</p>
+
+<p ng-if="product.qty > 0" class="row greenColor">This Product is in stock</p>
+<p class="row redColor" ng-show="true">This Product is out of stock</p>
+
+<div ng-model="product.qty">Quantity left: {{ pQty }}</div>
+
+<div class="input-group spinner">
+	<input type="number" class="form-control" value="1" min="1" max="10">
+</div>
+<a class="btn btn-primary" type="submit" ng-href="#/main">Add to Cart</a>
+
+<div class="header"><strong><h4>About the Product</h4></strong></div>
+
+<ul>
+	<li>sdsdfsdfsfdsdf</li>
+	<li>sdsdfsdfsfdsdf</li>
+	<li>sdsdfsdfsfdsdf</li>
+	<li>sdsdfsdfsfdsdf</li>
+	<li>sdsdfsdfsfdsdf</li>
+	<li>sdsdfsdfsfdsdf</li>
+</ul>
+
+
+</div>
