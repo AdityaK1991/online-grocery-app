@@ -1,13 +1,76 @@
 <div ng-controller="CustomerInfoCtrl">
-<div ng-hide="editorEnabled">
-  {{ title }}
-  <a href="#" ng-click="enableEditor()">Edit title</a>
-</div>
-<div ng-show="editorEnabled">
-  <input ng-model="editableTitle" ng-show="editorEnabled">
-  <a href="#/customer-info" ng-click="save()">Save</a>
-  or
-  <a href="#/customer-info" ng-click="disableEditor()">Cancel</a>.
-</div>
+	<!-- <div class="jumbotron"> -->
+		
+		<table class="table container">
+		<!-- <div class="row center">
 
+			<div class="col-xs-3">
+			First Name
+			</div>
+
+			<div class="col-xs-3" ng-hide="editorEnabled">
+			  {{ title }}
+
+			  <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableEditor()"/>
+			</div>
+
+			<div class="col-xs-3" ng-show="editorEnabled">
+			  <input ng-model="editableTitle" ng-show="editorEnabled">
+			  	<div class="pull-right">
+			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-click="save()"/>
+			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableEditor()"/>
+				</div>
+			</div>
+
+		</div> -->
+
+		<tbody>
+
+			<tr>
+			<th>
+			First Name
+			</th>
+
+			<td ng-hide="editorEnabled">
+			  {{ title }}
+
+			  <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableEditor()"/>
+			</td>
+
+			<td ng-show="editorEnabled">
+			  <input ng-model="editableTitle" ng-show="editorEnabled">
+			  	<div class="pull-right">
+			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-click="save()"/>
+			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableEditor()"/>
+				</div>
+			</td>
+			</tr>
+
+
+
+<tr>
+			<th>
+			First Name
+			</th>
+
+			<td ng-hide="editorEnabled">
+			  {{ title }}
+
+			  <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableEditor()"/>
+			</td>
+
+			<td ng-show="editorEnabled">
+			  <input ng-model="editableTitle" ng-show="editorEnabled">
+			  	<div class="pull-right">
+			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-click="save()"/>
+			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableEditor()"/>
+				</div>
+			</td>
+			</tr>
+
+
+		</tbody>
+
+</table>
+	<!-- </div> -->
 </div>

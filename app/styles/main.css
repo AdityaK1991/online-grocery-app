@@ -255,4 +255,16 @@ body {
 .greenColor {
   color: green;
 }
+
+/* Glyphicon size */
+.glyphicon {
+    font-size: 20px;
+}
+
+/* Center align */
+.center {
+    text-align: center;
+    border: 3px;
+}
+
 }
