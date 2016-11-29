@@ -267,4 +267,16 @@ body {
     border: 3px;
 }
 
+
+/* disable */
+.disabled {
+  cursor: not-allowed; 
+  pointer-events: none;
+  opacity: .5;
+}
+/* table width */
+
+/*.table .th {
+    width: auto !important;
+}*/
 }
