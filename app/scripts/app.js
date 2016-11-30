@@ -39,6 +39,11 @@ angular
         controller: 'CustomerInfoCtrl',
         controllerAs: 'customerInfo'
       })
+      .when('/order-history', {
+        templateUrl: 'views/orderHistory.html',
+        controller: 'OrderHistoryCtrl',
+        controllerAs: 'orderHistory'
+      })
       .when('/register', {
         templateUrl: 'views/signup.html',
         controller: 'SignupCtrl',

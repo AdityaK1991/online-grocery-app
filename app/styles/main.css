@@ -256,6 +256,14 @@ body {
   color: green;
 }
 
+.whiteColor {
+  color: white;
+}
+
+.customColor {
+  background-color: #e3f2fd;
+}
+
 /* Glyphicon size */
 .glyphicon {
     font-size: 20px;
@@ -279,4 +287,6 @@ body {
 /*.table .th {
     width: auto !important;
 }*/
+
+
 }

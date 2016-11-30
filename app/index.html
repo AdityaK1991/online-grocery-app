@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Online Grocery Store</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
+
   <body ng-app="onlineGroceryStoreApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -23,39 +24,56 @@
     <!-- Add your site or application content here -->
 
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
+      <nav class="navbar navbar-dark bg-primary" role="navigation">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+          <a class="navbar-brand whiteColor" ng-href="#/">
+            <!-- <img src="images/yeoman.png" width="50" height="50" class="d-inline-block align-top" alt=""> -->
+            Online Grocery Store
+          </a>
+          
+          <div class="container">
+
+           <!--  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </button>
+            </button> -->
 
-            <a class="navbar-brand" href="#/">Online Grocery Store</a>
-          </div>
+          <!-- <div class="collapse navbar-collapse" id="js-navbar-collapse"> -->
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+            
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li class="active"><a class="whiteColor" href="#/">Home</a></li>
+              <li><a class="whiteColor" ng-href="#/customer-info">Account Information</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle whiteColor" href="#/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>              
+              <li><a class="whiteColor" ng-href="#/order-history">Order History</a></li>
+              <li><a class="whiteColor" ng-href="#/">Logout</a></li>
             </ul>
-          </div>
+
+          <!-- </div> -->
         </div>
-      </div>
-
+      </nav>
     </div>
-<!--     <div class="container">
- -->    <div ng-view=""></div>
-    <!-- </div> -->
 
-    <div class="footer">
+
+    <div class="container">
+    <div ng-view=""></div>
+    </div>
+
+    <div class="footer bg-primary">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p class="whiteColor"><span class="glyphicon glyphicon-heart"></span></p>
       </div>
     </div>
 
@@ -94,6 +112,7 @@
         <script src="scripts/controllers/forgotPassword.js"></script>
         <script src="scripts/controllers/productDetail.js"></script>
         <script src="scripts/controllers/customerInfo.js"></script>
+        <script src="scripts/controllers/orderHistory.js"></script>
         <!-- endbuild -->
 </body>
 </html>
