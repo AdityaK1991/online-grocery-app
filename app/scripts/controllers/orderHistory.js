@@ -1,8 +1,11 @@
 angular.module('onlineGroceryStoreApp')
-  .controller('OrderHistoryCtrl', function () {
+  .controller('OrderHistoryCtrl', function ($rootScope, $scope) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+    $rootScope.isMenuVisible = false;
+
   });

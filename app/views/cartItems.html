@@ -1,0 +1,52 @@
+<div class="container" ng-controller="CartItemsCtrl">
+
+  <table class="table table-hover container">
+
+
+  <tbody>
+    
+    <div class="center"><strong><h3>Cart Items</h3></strong>
+      <!-- <span ng-hide="editorCustomerInfoEnabled">
+        <a class="glyphicon glyphicon-edit" href="#/customer-info" ng-click="enableCustomerInfoEditor()"/>
+      </span>
+
+      <span ng-show="editorCustomerInfoEnabled">
+          <a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableFName || !editableLName || !editableAddressL1 || !editableAddressL2 || !editableCity || !editableState || !editableZip || !editableCountry || !editablePhone }" ng-click="saveCustomerInfo()"/>
+          <a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCustomerInfoEditor()"/>
+      </span> -->
+    </div>
+
+    <tr ng-repeat="item in cartItems">
+      <th class="col-xs-2"></th>
+
+      <td>
+        {{ item.name }}
+      </td>
+
+      <td ng-hide="cartItemsCopy[$index].isCartItemEditable">
+        {{ item.qty }}
+      </td>
+
+      <td ng-show="cartItemsCopy[$index].isCartItemEditable">
+        <input type="number" ng-model="item.qty">
+      </td>
+      
+      <td>
+        {{ item.qty * item.pricePerItem }}
+      </td>
+
+      <td ng-hide="cartItemsCopy[$index].isCartItemEditable">
+          <a class="glyphicon glyphicon-edit" href="#/cart" ng-click="makeCartItemEditable($index)"/>
+      </td> 
+
+      <td ng-show="cartItemsCopy[$index].isCartItemEditable">
+          <a class="glyphicon glyphicon-check" href="#/cart" ng-click="saveEditedCartItem($index)"/>
+      </td> 
+
+      <td>
+          <a class="glyphicon glyphicon-trash" href="#/cart" ng-click="deleteCartItem($index)"/>
+      </td>
+    </tr>
+    </tbody>
+    </table>
+</div>

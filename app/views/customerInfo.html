@@ -13,8 +13,8 @@
 			</span>
 
 			<span ng-show="editorCustomerInfoEnabled">
-		  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableFName || !editableLName || !editableAddressL1 || !editableAddressL2 || !editableCity || !editableState || !editableZip || !editableCountry || !editablePhone }" ng-click="saveCustomerInfo()"/>
-		  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCustomerInfoEditor()"/>
+		  		<a class="glyphicon glyphicon-ok-circle" href="#/customer-info" ng-class="{disabled: !editableFName || !editableLName || !editableAddressL1 || !editableAddressL2 || !editableCity || !editableState || !editableZip || !editableCountry || !editablePhone }" ng-click="saveCustomerInfo()"/>
+		  		<!-- <a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCustomerInfoEditor()"/> -->
 			</span>
 		</div>
 
@@ -23,15 +23,10 @@
 
 			<td ng-hide="editorCustomerInfoEnabled">
 			  {{ fName }}
-			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableFNameEditor()"/> -->
 			</td>
 
 			<td ng-show="editorCustomerInfoEnabled">
 			  <input class="form-control" ng-model="editableFName" ng-show="editorCustomerInfoEnabled">
-			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableFName}" ng-click="saveFName()"/>
-			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableFNameEditor()"/>
-				</div> -->
 			</td>
 		</tr>
 
@@ -42,15 +37,10 @@
 
 			<td ng-hide="editorCustomerInfoEnabled">
 			  {{ lName }}
-			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableLNameEditor()"/> -->
 			</td>
 
 			<td ng-show="editorCustomerInfoEnabled">
 			  <input class="form-control" ng-model="editableLName" ng-show="editorCustomerInfoEnabled">
-			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableLName}" ng-click="saveLName()"/>
-			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableLNameEditor()"/>
-				</div> -->
 			</td>
 		</tr>
 
@@ -59,15 +49,10 @@
 
 			<td ng-hide="editorCustomerInfoEnabled">
 			  {{ addressL1 }}
-			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableAddressL1Editor()"/> -->
 			</td>
 
 			<td ng-show="editorCustomerInfoEnabled">
 			  <input class="form-control" ng-model="editableAddressL1" ng-show="editorCustomerInfoEnabled">
-			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableAddressL1}" ng-click="saveAddressL1()"/>
-			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableAddressL2Editor()"/>
-				</div> -->
 			</td>
 		</tr>
 
@@ -77,15 +62,10 @@
 
 			<td ng-hide="editorCustomerInfoEnabled">
 			  {{ addressL2 }}
-			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableAddressL2Editor()"/> -->
 			</td>
 
 			<td ng-show="editorCustomerInfoEnabled">
 			  <input class="form-control" ng-model="editableAddressL2" ng-show="editorCustomerInfoEnabled">
-			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableAddressL2}" ng-click="saveAddressL2()"/>
-			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableAddressL2Editor()"/>
-				</div> -->
 			</td>
 		</tr>
 
@@ -95,15 +75,10 @@
 
 			<td ng-hide="editorCustomerInfoEnabled">
 			  {{ city }}
-			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableCityEditor()"/> -->
 			</td>
 
 			<td ng-show="editorCustomerInfoEnabled">
 			  <input class="form-control" ng-model="editableCity" ng-show="editorCustomerInfoEnabled">
-			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableCity}" ng-click="saveCity()"/>
-			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCityEditor()"/>
-				</div> -->
 			</td>
 		</tr>
 
@@ -112,15 +87,10 @@
 
 			<td ng-hide="editorCustomerInfoEnabled">
 			  {{ state }}
-			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableStateEditor()"/> -->
 			</td>
 
 			<td ng-show="editorCustomerInfoEnabled">
 			  <input class="form-control" ng-model="editableState" ng-show="editorCustomerInfoEnabled">
-			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableState}" ng-click="saveState()"/>
-			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableStateEditor()"/>
-				</div> -->
 			</td>
 		</tr>
 
@@ -129,15 +99,10 @@
 
 			<td ng-hide="editorCustomerInfoEnabled">
 			  {{ zip }}
-			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableZipEditor()"/> -->
 			</td>
 
 			<td ng-show="editorCustomerInfoEnabled">
 			  <input class="form-control" type="number" maxlength="6" ng-model="editableZip" ng-show="editorCustomerInfoEnabled">
-			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableZip}" ng-click="saveZip()"/>
-			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableZipEditor()"/>
-				</div> -->
 			</td>
 		</tr>
 
@@ -146,15 +111,10 @@
 
 			<td ng-hide="editorCustomerInfoEnabled">
 			  {{ country }}
-			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableCountryEditor()"/> -->
 			</td>
 
 			<td ng-show="editorCustomerInfoEnabled">
 			  <input class="form-control" ng-model="editableCountry" ng-show="editorCustomerInfoEnabled">
-			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableCountry}" ng-click="saveCountry()"/>
-			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCountryEditor()"/>
-				</div> -->
 			</td>
 		</tr>
 
@@ -163,15 +123,10 @@
 
 			<td ng-hide="editorCustomerInfoEnabled">
 			  {{ phone }}
-			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enablePhoneEditor()"/> -->
 			</td>
 
 			<td ng-show="editorCustomerInfoEnabled">
 			  <input class="form-control" type="number" ng-model="editablePhone" ng-show="editorCustomerInfoEnabled">
-			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editablePhone}" ng-click="savePhone()"/>
-			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disablePhoneEditor()"/>
-				</div> -->
 			</td>
 		</tr>
 	</tbody>
@@ -179,36 +134,36 @@
 </table>
 
 
-<div class="center"><strong><h3>Payment Details</h3></strong></div>
+<div class="center" ng-if="paymentMethods.length > 0"><strong><h3>Payment Details</h3></strong></div>
 
 <div class="form-group" ng-repeat="paymentMethod in paymentMethods">
 
 <table class="table table-hover container">
 	<tbody>
-		<div class="center"><strong><h3>Payment Method {{ paymentMethod.id}}</h3></strong>
-			<span ng-hide="isEditorCardEnabled(paymentMethod.id)">
-			  <a class="glyphicon glyphicon-edit" href="#/customer-info" ng-click="enableCardEditor(paymentMethod.id)"/>
+		<div class="center"><strong><h3>Payment Method {{ $index+1 }}</h3></strong>
+			<span ng-hide="paymentMethodsCopy[$index].isCardEditable">
+			  <a class="glyphicon glyphicon-edit" href="#/customer-info" ng-click="enableCardEditor($index)"/>
 			</span>
 
-			<span ng-show="isEditorCardEnabled(paymentMethod.id)">
-		  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !paymentMethod.editableCardName || !paymentMethod.editableCardNumber || !paymentMethod.editableCardMM || !paymentMethod.editableCardYYYY}" ng-click="saveCardInfo()"/>
-		  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCardEditor(paymentMethod.id)"/>
+			<span ng-show="paymentMethodsCopy[$index].isCardEditable">
+		  		<a class="glyphicon glyphicon-ok-circle" href="#/customer-info" ng-class="{disabled: !paymentMethod.cardName || !paymentMethod.cardNumber || !paymentMethod.cardMM || !paymentMethod.cardYYYY}" ng-click="saveCardInfo($index)"/>
+		  		<a class="glyphicon glyphicon-remove-circle" href="#/customer-info" ng-click="deleteCard($index)"/>
 			</span>
 		</div>
 		
 		<tr>
 			<th class="col-xs-2">Name on Card</th>
 
-			<td ng-hide="isEditorCardEnabled(paymentMethod.id)">
+			<td ng-hide="paymentMethodsCopy[$index].isCardEditable">
 			  <!-- {{ cardName }} -->
-			  {{ paymentMethod.editableCardName }}
+			  {{ paymentMethod.cardName }}
 			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableCardEditor()"/> -->
 			</td>
 
-			<td ng-show="isEditorCardEnabled(paymentMethod.id)">
-			  <input class="form-control" ng-model="paymentMethod.editableCardName" ng-show="isEditorCardEnabled(paymentMethod.id)">
+			<td ng-show="paymentMethodsCopy[$index].isCardEditable">
+			  <input class="form-control" ng-model="paymentMethod.cardName" ng-show="paymentMethodsCopy[$index].isCardEditable">
 			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableCardName}" ng-click="saveCardInfo()"/>
+			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !cardName}" ng-click="saveCardInfo()"/>
 			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCardEditor()"/>
 				</div> -->
 			</td>
@@ -217,16 +172,16 @@
 		<tr>
 			<th class="col-xs-2">Card number</th>
 
-			<td ng-hide="isEditorCardEnabled(paymentMethod.id)">
+			<td ng-hide="paymentMethodsCopy[$index].isCardEditable">
 			  <!-- {{ cardNumber }} -->
-			  {{ paymentMethod.editableCardNumber }}
+			  {{ paymentMethod.cardNumber }}
 			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableCardEditor()"/> -->
 			</td>
 
-			<td ng-show="editorCardEnabled">
-			  <input class="form-control"s type="number" maxlength="16" ng-model="paymentMethod.editableCardNumber" ng-show="isEditorCardEnabled(paymentMethod.id)">
+			<td ng-show="paymentMethodsCopy[$index].isCardEditable">
+			  <input class="form-control"s type="number" maxlength="16" ng-model="paymentMethod.cardNumber" ng-show="paymentMethodsCopy[$index].isCardEditable">
 			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableCardNumber}" ng-click="saveCardInfo()"/>
+			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !cardNumber}" ng-click="saveCardInfo()"/>
 			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCardEditor()"/>
 				</div> -->
 			</td>
@@ -236,19 +191,21 @@
 		<tr>
 			<th class="col-xs-2">Expiration Date</th>
 
-			<td ng-hide="isEditorCardEnabled(paymentMethod.id)">
+			<td ng-hide="paymentMethodsCopy[$index].isCardEditable">
 			  <!-- {{cardMM}}/{{cardYYYY}} -->
-			  {{paymentMethod.editableCardMM}}/{{paymentMethod.editableCardYYYY}}
+			  <span ng-if="paymentMethod.cardMM && paymentMethod.cardYYYY">
+			  {{paymentMethod.cardMM}}/{{paymentMethod.cardYYYY}}
+			  </span>
 			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableCardEditor()"/> -->
 			</td>
 
-			<td ng-show="isEditorCardEnabled(paymentMethod.id)">
+			<td ng-show="paymentMethodsCopy[$index].isCardEditable">
 				<div class="input-group spinner">
-					<span><strong>MM</strong></span><input type="number" ng-model="paymentMethod.editableCardMM" ng-show="isEditorCardEnabled(paymentMethod.id)" class="form-control" value="1" min="1" max="12" required><br>
-					<span><strong>YYYY</strong></span><input type="number" ng-model="paymentMethod.editableCardYYYY" ng-show="isEditorCardEnabled(paymentMethod.id)" class="form-control" value="2016" min="2016" required>		
+					<span><strong>MM</strong></span><input type="number" ng-model="paymentMethod.cardMM" ng-show="paymentMethodsCopy[$index].isCardEditable" class="form-control" value="1" min="1" max="12" required><br>
+					<span><strong>YYYY</strong></span><input type="number" ng-model="paymentMethod.cardYYYY" ng-show="paymentMethodsCopy[$index].isCardEditable" class="form-control" value="2016" min="2016" required>		
 				</div>
 			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !editableCardMM || !editableCardYYYY}"  ng-click="saveCardInfo()"/>
+			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !cardMM || !cardYYYY}"  ng-click="saveCardInfo()"/>
 			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCardEditor()"/>
 				</div> -->
 			</td>

@@ -30,42 +30,13 @@
             <!-- <img src="images/yeoman.png" width="50" height="50" class="d-inline-block align-top" alt=""> -->
             Online Grocery Store
           </a>
+        
+        <ng-include src="'views/navMenu.html'" ng-hide="isMenuVisible"></ng-include>
           
-          <div class="container">
-
-           <!--  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button> -->
-
-          <!-- <div class="collapse navbar-collapse" id="js-navbar-collapse"> -->
-
-            
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a class="whiteColor" href="#/">Home</a></li>
-              <li><a class="whiteColor" ng-href="#/customer-info">Account Information</a></li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle whiteColor" href="#/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Categories
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>              
-              <li><a class="whiteColor" ng-href="#/order-history">Order History</a></li>
-              <li><a class="whiteColor" ng-href="#/">Logout</a></li>
-            </ul>
-
-          <!-- </div> -->
-        </div>
       </nav>
     </div>
 
+              
 
     <div class="container">
     <div ng-view=""></div>
@@ -113,6 +84,7 @@
         <script src="scripts/controllers/productDetail.js"></script>
         <script src="scripts/controllers/customerInfo.js"></script>
         <script src="scripts/controllers/orderHistory.js"></script>
+        <script src="scripts/controllers/cartItems.js"></script>
         <!-- endbuild -->
 </body>
 </html>

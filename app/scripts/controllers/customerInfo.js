@@ -1,11 +1,12 @@
  angular.module('onlineGroceryStoreApp')
-  .controller('CustomerInfoCtrl', function ($scope) {
+  .controller('CustomerInfoCtrl', function ($rootScope, $scope) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
   
+    $rootScope.isMenuVisible = false;
 
  /* First Name */
 
@@ -206,31 +207,29 @@
 
 /* Name on Card */
  
- $scope.paymentMethods = [];
+ $scope.paymentMethods = [{id: 0, cardName: "sdfsff", cardNumber: 234234, cardMM: 11, cardYYYY: 2019}];
 
- $scope.editedCard= {};
+ $scope.paymentMethodsCopy = [];
 
-  $scope.editorCardEnabled = true;
+  angular.forEach($scope.paymentMethods, function(value, key) {
+    $scope.paymentMethodsCopy.push({
+      id: value.id,
+      isCardEditable: false
+    });
+  });
 
-  $scope.isEditorCardEnabled = function(id) {
-    return $scope.editorCardEnabled;
-  }
-  
-  $scope.enableCardEditor = function(id) {
-    $scope.editorCardEnabled = true;
-   
-    angular.copy($scope.paymentMethods[id], $scope.editedCard);
-
+  $scope.enableCardEditor = function($index) {
+    $scope.paymentMethodsCopy[$index].isCardEditable = true;
   };
   
-  $scope.disableCardEditor = function(id) {
-    $scope.editorCardEnabled = false;
+  $scope.disableCardEditor = function($index) {
+    $scope.paymentMethodsCopy[$index].isCardEditable = false;
   };
   
-  $scope.saveCardInfo = function() {
-    angular.copy($scope.editedCard, $scope.paymentMethods[$scope.id]);
+  $scope.saveCardInfo = function($index) {
+    // angular.copy($scope.editedCard, $scope.paymentMethods[$scope.id]);
 
-    $scope.disableCardEditor();
+    $scope.disableCardEditor($index);
   };
 
   $scope.addPaymentMethod = function() {
@@ -240,11 +239,22 @@
     $scope.paymentMethods.push(
       { 
         id: $scope.len+1,
-        editableCardName: "sdfsff",
-        editableCardNumber: 653653653,
-        editableCardMM: 11,
-        editableCardYYYY: 2018
+        cardName: "sdfsff",
+        cardNumber: null,
+        cardMM: null,
+        cardYYYY: null
       });
+
+    $scope.paymentMethodsCopy.push({
+      id: $scope.len+1,
+      isCardEditable: false
+    });
+  }
+
+  $scope.deleteCard = function($index) {
+    $scope.paymentMethods.splice($index, 1);
+    $scope.paymentMethodsCopy.splice($index, 1);
+
   }
 
 // /* Card Number */
@@ -253,7 +263,7 @@
   
 //   $scope.enableCardNumberEditor = function() {
 //     $scope.editorCardNumberEnabled = true;
-//     $scope.editableCardNumber = $scope.cardNumber;
+//     $scope.cardNumber = $scope.cardNumber;
 //   };
   
 //   $scope.disableCardNumberEditor = function() {
@@ -261,7 +271,7 @@
 //   };
   
 //   $scope.saveCardNumber = function() {
-//     $scope.cardNumber = $scope.editableCardNumber;
+//     $scope.cardNumber = $scope.cardNumber;
 //     $scope.disableCardNumberEditor();
 //   };
 
@@ -274,8 +284,8 @@
   
 //   $scope.enableCardDateEditor = function() {
 //     $scope.editorCardDateEnabled = true;
-//     $scope.editableCardMM = $scope.cardMM;
-//     $scope.editableCardYYYY = $scope.cardYYYY;
+//     $scope.cardMM = $scope.cardMM;
+//     $scope.cardYYYY = $scope.cardYYYY;
 //   };
   
 //   $scope.disableCardDateEditor = function() {
@@ -283,8 +293,8 @@
 //   };
   
 //   $scope.saveCardDate = function() {
-//     $scope.cardMM = $scope.editableCardMM;
-//     $scope.cardYYYY = $scope.editableCardYYYY;
+//     $scope.cardMM = $scope.cardMM;
+//     $scope.cardYYYY = $scope.cardYYYY;
 //     $scope.disableCardDateEditor();
 //   };
 
@@ -295,7 +305,7 @@
   
 //   $scope.enableCardYYYYEditor = function() {
 //     $scope.editorCardYYYYEnabled = true;
-//     $scope.editableCardYYYY = $scope.cardYYYY;
+//     $scope.cardYYYY = $scope.cardYYYY;
 //   };
   
 //   $scope.disableCardYYYYEditor = function() {
@@ -303,7 +313,7 @@
 //   };
   
 //   $scope.save = function() {
-//     $scope.cardYYYY = $scope.editableCardYYYY;
+//     $scope.cardYYYY = $scope.cardYYYY;
 //     $scope.disableCardYYYYEditor();
 //   };
 
