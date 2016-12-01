@@ -14,7 +14,6 @@
 
 			<span ng-show="editorCustomerInfoEnabled">
 		  		<a class="glyphicon glyphicon-ok-circle" href="#/customer-info" ng-class="{disabled: !editableFName || !editableLName || !editableAddressL1 || !editableAddressL2 || !editableCity || !editableState || !editableZip || !editableCountry || !editablePhone }" ng-click="saveCustomerInfo()"/>
-		  		<!-- <a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCustomerInfoEditor()"/> -->
 			</span>
 		</div>
 
@@ -155,17 +154,11 @@
 			<th class="col-xs-2">Name on Card</th>
 
 			<td ng-hide="paymentMethodsCopy[$index].isCardEditable">
-			  <!-- {{ cardName }} -->
 			  {{ paymentMethod.cardName }}
-			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableCardEditor()"/> -->
 			</td>
 
 			<td ng-show="paymentMethodsCopy[$index].isCardEditable">
 			  <input class="form-control" ng-model="paymentMethod.cardName" ng-show="paymentMethodsCopy[$index].isCardEditable">
-			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !cardName}" ng-click="saveCardInfo()"/>
-			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCardEditor()"/>
-				</div> -->
 			</td>
 		</tr>
 
@@ -173,17 +166,11 @@
 			<th class="col-xs-2">Card number</th>
 
 			<td ng-hide="paymentMethodsCopy[$index].isCardEditable">
-			  <!-- {{ cardNumber }} -->
 			  {{ paymentMethod.cardNumber }}
-			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableCardEditor()"/> -->
 			</td>
 
 			<td ng-show="paymentMethodsCopy[$index].isCardEditable">
 			  <input class="form-control"s type="number" maxlength="16" ng-model="paymentMethod.cardNumber" ng-show="paymentMethodsCopy[$index].isCardEditable">
-			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !cardNumber}" ng-click="saveCardInfo()"/>
-			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCardEditor()"/>
-				</div> -->
 			</td>
 		</tr>
 
@@ -192,11 +179,9 @@
 			<th class="col-xs-2">Expiration Date</th>
 
 			<td ng-hide="paymentMethodsCopy[$index].isCardEditable">
-			  <!-- {{cardMM}}/{{cardYYYY}} -->
 			  <span ng-if="paymentMethod.cardMM && paymentMethod.cardYYYY">
 			  {{paymentMethod.cardMM}}/{{paymentMethod.cardYYYY}}
 			  </span>
-			  <!-- <a class="glyphicon glyphicon-edit pull-right" href="#/customer-info" ng-click="enableCardEditor()"/> -->
 			</td>
 
 			<td ng-show="paymentMethodsCopy[$index].isCardEditable">
@@ -204,10 +189,6 @@
 					<span><strong>MM</strong></span><input type="number" ng-model="paymentMethod.cardMM" ng-show="paymentMethodsCopy[$index].isCardEditable" class="form-control" value="1" min="1" max="12" required><br>
 					<span><strong>YYYY</strong></span><input type="number" ng-model="paymentMethod.cardYYYY" ng-show="paymentMethodsCopy[$index].isCardEditable" class="form-control" value="2016" min="2016" required>		
 				</div>
-			  	<!-- <div class="pull-right">
-			  		<a class="glyphicon glyphicon-saved" href="#/customer-info" ng-class="{disabled: !cardMM || !cardYYYY}"  ng-click="saveCardInfo()"/>
-			  		<a class="glyphicon glyphicon-trash" href="#/customer-info" ng-click="disableCardEditor()"/>
-				</div> -->
 			</td>
 		</tr>
 	</tbody>
