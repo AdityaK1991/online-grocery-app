@@ -44,6 +44,11 @@ angular
         controller: 'OrderHistoryCtrl',
         controllerAs: 'orderHistory'
       })
+      .when('/order-payment', {
+        templateUrl: 'views/orderPayment.html',
+        controller: 'OrderPaymentCtrl',
+        controllerAs: 'orderPayment'
+      })  
       .when('/cart', {
         templateUrl: 'views/cartItems.html',
         controller: 'CartItemsCtrl',

@@ -16,9 +16,13 @@
       </span> -->
     </div>
 
-    <tr ng-repeat="item in cartItems">
-      <th class="col-xs-2"></th>
+    <th class="col-xs-2">Product</th>
+    <th class="col-xs-2">Quantity</th>
+    <th class="col-xs-2">Total Price</th>
+    <th class="col-xs-2">Edit</th>
+    <th class="col-xs-2">Delete</th>
 
+    <tr ng-repeat="item in cartItems">
       <td>
         {{ item.name }}
       </td>
@@ -49,4 +53,7 @@
     </tr>
     </tbody>
     </table>
+
+    <button class="btn btn-primary center-block">Checkout</button>
+
 </div>

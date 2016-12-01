@@ -1,0 +1,23 @@
+<div ng-controller="OrderPaymentCtrl">
+
+<div class="title"><h4><strong>Shipping Address</strong></h4></div>
+
+<address>
+	<strong>{{ fName }} {{ lName }}</strong><br>
+	{{ addressL1 }}<br>
+	{{ addressL1 }}<br>
+	{{ city }}, {{ state }} {{ zip }}<br>
+</address>
+
+<div class="title"><h4><strong>Payment Method</strong></h4></div>
+
+	<div ng-repeat="card in cards">
+		<label>
+		  <input type="radio">
+		  	Card 1
+		</label>
+		<p>Card ending in {{card.cardNumber}}</p>
+	</div>			
+</div>
+
+<button class="btn btn-primary">Place order</button>
