@@ -1,18 +1,20 @@
-<div class="container">
+<div class="center card card-outline-blue whiteColor"><strong><h3>Order History</h3></strong></div>
 
-  <div class="row" ng-repeat="a in ['1', '2', 3]">
-    <div class="col-md-6 col-md-offset-3">
-      <div class="thumbnail">
-        <img src="images/yeoman.png" class="img-responsive customHeight" alt="...">
-          <div class="caption">
-            <h5>Thumbnail label</h5>
-          </div>
-      </div>
-    </div>
+<div class="row custom-jumbotron" ng-repeat="a in ['1', '2', 3]">
+  <div class="col-md-5 card">
+    <!-- <div class="thumbnail">
+      <img src="images/yeoman.png" class="img-responsive customHeight" alt="">
+        <div class="caption">
+          <h5>Thumbnail label</h5>
+        </div>
+    </div> -->
+    <img class="customHeight150 center-block" src="images/yeoman.png" alt="Product">
+  </div>
 
-    <p>Price: {{ pPrice }}</p>
-    <p>Quantity purchased: {{ pQty }}</p>
-    <p>Purchase Date: {{ pPurchaseDate }}</p>
-
+  <div class="col-md-5"><br>
+    <p><strong>Product: {{ pName }}</strong></p>
+    <p><strong>Price: {{ pPrice }}</strong></p>
+    <p><strong>Quantity purchased: {{ pQty }}</strong></p>
+    <p><strong>Purchase Date: {{ pPurchaseDate }}</strong></p>
   </div>
 </div>

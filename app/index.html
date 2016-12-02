@@ -24,29 +24,30 @@
     <!-- Add your site or application content here -->
 
     <div class="header">
-      <nav class="navbar navbar-dark bg-primary" role="navigation">
+        <ng-include src="'views/navSideMenu.html'" ng-hide="isMenuVisible"></ng-include>
+
+    </div>
+
+    <div class="container">
+
+    <!-- <nav class="navbar navbar-dark bg-primary" role="navigation">
 
           <a class="navbar-brand whiteColor" ng-href="#/">
-            <!-- <img src="images/yeoman.png" width="50" height="50" class="d-inline-block align-top" alt=""> -->
+            <img src="images/yeoman.png" width="50" height="50" class="d-inline-block align-top" alt="">
             Online Grocery Store
           </a>
         
         <ng-include src="'views/navMenu.html'" ng-hide="isMenuVisible"></ng-include>
-          
-      </nav>
-    </div>
 
-              
-
-    <div class="container">
+      </nav> -->
     <div ng-view=""></div>
     </div>
 
-    <div class="footer bg-primary">
+    <!-- <div class="footer bg-primary">
       <div class="container">
         <p class="whiteColor"><span class="glyphicon glyphicon-heart"></span></p>
       </div>
-    </div>
+    </div> -->
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

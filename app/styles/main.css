@@ -86,6 +86,14 @@ body {
     margin-bottom: 50px;
   }
 
+/* Rounded background */
+
+.rounded-blue-background {
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /*background-color: gray;*/
+}
 
 /* table margin */
 
@@ -94,16 +102,14 @@ body {
   margin-bottom:10px; 
 }
 
-
-
   /* Side bar components */
 
   .nav-side-menu {
   overflow: auto;
   font-family: verdana;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 200;
-  background-color: #2e353d;
+  background-color: #3a7ebf;
   position: fixed;
   top: 0px;
   width: 300px;
@@ -127,6 +133,7 @@ body {
   margin: 0px;
   line-height: 35px;
   cursor: pointer;
+
   /*    
     .collapsed{
        .arrow:before{
@@ -277,7 +284,7 @@ body {
 }
 
 .customColor {
-  background-color: #e3f2fd;
+  background-color: #87ceeb;
 }
 
 /* Glyphicon size */
@@ -291,6 +298,11 @@ body {
     border: 3px;
 }
 
+/* custom padding */
+.paddingLR10 {
+  padding-left:10px; 
+  padding-right:10px; 
+}
 
 /* disable */
 .disabled {
@@ -299,7 +311,20 @@ body {
   opacity: .5;
 }
 
+/* container custom width */
+.container {
+  margin-left: 300px;
+  max-width: 1000px;
+}
 
+.revert-container {
+  margin-left: 0px;
+  max-width: 730px;
+}
+
+.custom-jumbotron {
+  padding-left: 60px;
+}
 
 
 
@@ -321,8 +346,15 @@ body {
 }
 
 .card-outline-primary {
-  background-color: #dfe7f1
+  background-color: #3a7ebf;
 }
+
+.card-outline-blue {
+  background-color: #3a7ebf;
+}
+
+
+
 .card span.card-title {
     color: blue;
     font-size: 12px;
@@ -383,8 +415,8 @@ body {
     overflow: hidden;
 }
 
-.customHeight {
-    height:200px;
+.customHeight150 {
+    height:150px;
     background-color:#FFFFFF;
     margin-top:10px;
     overflow: hidden;

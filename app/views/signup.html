@@ -1,9 +1,7 @@
-<div class="header center">
-	<h3>
-		<strong>Register</strong>	
-	</h3>
+<div class="revert-container center card card-outline-blue whiteColor">
+	<strong><h3>Register</h3></strong>
 </div>
-<div class="jumbotron">
+<div class="revert-container jumbotron">
 
       <form class="form" ng-submit="register()" accept-charset="UTF-8">
 
@@ -84,7 +82,9 @@
 		<div class="input-group-btn" ng-init="style={'background-color' : '#428bca'}">
 			<button type="button" class="btn btn-secondary btn-sm" ng-style="style1=style" ng-click="updateUserRole(0); style1=style; style2=null; style={'background-color' : '#428bca'}">Customer</button>
 			<button type="button" class="btn btn-secondary btn-sm" ng-style="style2" ng-click="updateUserRole(1); style2=style; style=null">Staff</button>
-		</div>
+		</div> 
+
+		<br>
 		
 		<div class="form-group has-feedback">
 			<div class="input-group">

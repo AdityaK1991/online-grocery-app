@@ -1,12 +1,28 @@
+<!-- <nav class="navbar navbar-dark bg-primary" role="navigation">
+   <span class="center-block whiteColor" ng-href="#/">
+          Home
+    </a>
+</nav> -->
+<div class="center card card-outline-blue whiteColor"><strong><h3>Products</h3></strong></div>
 <ng-include src="'views/carousel.html'"></ng-include>
-<!-- <ng-include src="'views/navSideMenu.html'"></ng-include> -->
+
+<div class="input-group card paddingLR10 card-outline-primary center">
+        <span class="input-group-btn paddingLR10 glyphicon glyphicon-search whiteColor"></span>
+    <input type="text" class="form-control" placeholder="Search Products">
+</div>
+
+
+<!-- <form class="navbar-form card card-outline-primary center" role="search">
+        <span class="glyphicon glyphicon-search"></span>
+    <input type="text" class="form-control" placeholder="Search Products">
+</form> -->
 
 <div class="jumbotron">
-
 <div class="row" >
   <div class="col-md-4 top-buffer" ng-repeat="itemsRow in ['1','2','3','4','5','6','7','8']">
     <!-- <div class="thumbnail">
       <a href="#">
+      
         <img src="images/yeoman.png" class="img-responsive" alt="...">
         <div class="caption">
           <h5>Thumbnail label</h5>

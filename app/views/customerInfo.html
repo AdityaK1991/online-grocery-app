@@ -2,12 +2,12 @@
 		
 <!-- 	<form class="form" ng-submit="login()" accept-charset="UTF-8">
  -->		
-	<table class="table table-hover container">
+	<table class="table table-hover">
 
 
 	<tbody class="card">
 		
-		<div class="center card card-outline-primary"><strong><h3>Account Details</h3></strong>
+		<div class="center card card-outline-primary whiteColor"><strong><h3>Account Details</h3></strong>
 			<span ng-hide="editorCustomerInfoEnabled">
 			  <a class="glyphicon glyphicon-edit" href="#/customer-info" ng-click="enableCustomerInfoEditor()"/>
 			</span>
@@ -161,9 +161,9 @@
  -->
 <div class="form-group" ng-repeat="paymentMethod in paymentMethods">
 
-<table class="table table-hover container">
+<table class="table table-hover">
 	<tbody class="card">
-		<div class="center card card-outline-primary"><strong><h3>Payment Method {{ $index+1 }}</h3></strong>
+		<div class="center card card-outline-primary whiteColor"><strong><h3>Payment Method {{ $index+1 }}</h3></strong>
 			<span ng-hide="paymentMethodsCopy[$index].isCardEditable">
 			  <a class="glyphicon glyphicon-edit" href="#/customer-info" ng-click="enableCardEditor($index)"/>
 			</span>
