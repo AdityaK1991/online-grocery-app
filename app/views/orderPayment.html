@@ -1,5 +1,12 @@
 <div ng-controller="OrderPaymentCtrl">
 
+<div class="title"><h4><strong>Order Summary</strong></h4></div>
+<p>Number of items: {{itemCount}}</p>
+<p>Price: {{itemCount * price}}</p>
+<p>Shipping and handling: {{itemCount * price * 0.15}}</p>
+<p>Estimated tax: {{itemCount * price * 0.10}}</p>
+<p><strong>Order total: {{(itemCount * price ) + (itemCount * price * 0.15) + (itemCount * price * 0.10)}}</strong></p>
+
 <div class="title"><h4><strong>Shipping Address</strong></h4></div>
 
 <address>

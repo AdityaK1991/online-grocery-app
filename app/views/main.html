@@ -4,17 +4,26 @@
 <div class="jumbotron">
 
 <div class="row" >
-  <div class="col-md-3" ng-repeat="itemsRow in ['1','2','3','4','5','6','7','8']">
-    <div class="thumbnail">
+  <div class="col-md-4 top-buffer" ng-repeat="itemsRow in ['1','2','3','4','5','6','7','8']">
+    <!-- <div class="thumbnail">
       <a href="#">
         <img src="images/yeoman.png" class="img-responsive" alt="...">
         <div class="caption">
           <h5>Thumbnail label</h5>
         </div>
       </a>
+    </div> -->
+    <div class="card">
+      <img class="card-image" src="images/yeoman.png" alt="Product">
+      <div class="card-block">
+        <span class="card-title"><h4>Product</h4></span>
+        <span class="card-text"><h5>Price</h5></span>
+          <a ng-href="#/products/1" class="btn btn-primary btn-xs">Add to Cart</a>
+      </div>
     </div>
   </div>
 </div>
+
   <!-- <h1>'Allo, 'Allo!</h1>
   <p class="lead">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>

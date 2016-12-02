@@ -1,0 +1,46 @@
+<div class="container" ng-controller="AdminManageProductCtrl">
+<!-- <ng-include src="'views/carousel.html'"> </ng-include> -->
+
+<div class="row" >
+  <div class="col-md-6 col-md-offset-3">
+    <div class="thumbnail">
+      <!-- <a href="#"> -->
+        <img src="images/yeoman.png" class="img-responsive" alt="...">
+        <div class="caption">
+          <h5>Thumbnail label</h5>
+        </div>
+      <!-- </a> -->
+    </div>
+  </div>
+</div>
+
+<div class="title"><h4><strong>Product Details</strong></h4></div>
+
+<span ng-hide="isEditorProductDetailsEnabled">
+  <a class="glyphicon glyphicon-edit" href="#/admin/products/1" ng-click="enableProductDetailsEditor()"/>
+</span>
+
+<span ng-show="isEditorProductDetailsEnabled">
+    <a class="glyphicon glyphicon-ok-circle" href="#/admin/products/1" ng-class="{disabled: !pPrice}" ng-click="saveProductDetailsInfo()"/>
+</span>
+
+<p>Price:
+  <span ng-hide="isEditorProductDetailsEnabled"> {{ pPrice }}</span>
+  <input type="number" ng-model="pPrice" ng-show="isEditorProductDetailsEnabled">
+</p>
+
+<p>Quantity left: {{ pQty }}</p>
+
+<div class="header"><strong><h4>About the Product</h4></strong></div>
+
+<ul>
+	<li>sdsdfsdfsfdsdf</li>
+	<li>sdsdfsdfsfdsdf</li>
+	<li>sdsdfsdfsfdsdf</li>
+	<li>sdsdfsdfsfdsdf</li>
+	<li>sdsdfsdfsfdsdf</li>
+	<li>sdsdfsdfsfdsdf</li>
+</ul>
+
+
+</div>

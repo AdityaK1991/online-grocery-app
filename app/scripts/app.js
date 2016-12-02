@@ -24,7 +24,7 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/product/:prodId', {
+      .when('/products/:productId', {
         templateUrl: 'views/productDetail.html',
         controller: 'ProductDetailCtrl',
         controllerAs: 'productDetail'
@@ -68,6 +68,21 @@ angular
         templateUrl: 'views/forgotPassword.html',
         controller: 'ForgotPasswordCtrl',
         controllerAs: 'forgotPassword'
+      })
+      .when('/admin/products', {
+        templateUrl: 'views/admin/adminProducts.html',
+        controller: 'AdminProductsCtrl',
+        controllerAs: 'adminProducts'
+      })
+      .when('/admin/products/:productId', {
+        templateUrl: 'views/admin/adminManageProduct.html',
+        controller: 'AdminManageProductCtrl',
+        controllerAs: 'adminManageProduct'
+      })
+      .when('/admin/orders', {
+        templateUrl: 'views/admin/adminOrders.html',
+        controller: 'AdminOrdersCtrl',
+        controllerAs: 'adminOrders'
       })
       .otherwise({
         redirectTo: '/'
