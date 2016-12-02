@@ -5,9 +5,9 @@
 	<table class="table table-hover container">
 
 
-	<tbody>
+	<tbody class="card">
 		
-		<div class="center"><strong><h3>Account Details</h3></strong>
+		<div class="center card card-outline-primary"><strong><h3>Account Details</h3></strong>
 			<span ng-hide="editorCustomerInfoEnabled">
 			  <a class="glyphicon glyphicon-edit" href="#/customer-info" ng-click="enableCustomerInfoEditor()"/>
 			</span>
@@ -128,18 +128,42 @@
 			  <input class="form-control" type="number" ng-model="editablePhone" ng-show="editorCustomerInfoEnabled">
 			</td>
 		</tr>
+
+		<tr  ng-if="isStaff">
+			<th  class="col-xs-2">Salary</th>
+
+			<td ng-hide="editorCustomerInfoEnabled">
+			  {{ salary }}
+			</td>
+
+			<td ng-show="editorCustomerInfoEnabled">
+			  <input class="form-control" type="number" ng-model="editableSalary" ng-show="editorCustomerInfoEnabled">
+			</td>
+		</tr>
+
+		<tr  ng-if="isStaff">
+			<th  class="col-xs-2">Job Title</th>
+
+			<td ng-hide="editorCustomerInfoEnabled">
+			  {{ jobTitle }}
+			</td>
+
+			<td ng-show="editorCustomerInfoEnabled">
+			  <input class="form-control" type="text" ng-model="editableJobTitle" ng-show="editorCustomerInfoEnabled">
+			</td>
+		</tr>
 	</tbody>
 
 </table>
 
 
-<div class="center" ng-if="paymentMethods.length > 0"><strong><h3>Payment Details</h3></strong></div>
-
+<!-- <div class="center card" ng-if="paymentMethods.length > 0"><strong><h3>Payment Details</h3></strong></div>
+ -->
 <div class="form-group" ng-repeat="paymentMethod in paymentMethods">
 
 <table class="table table-hover container">
-	<tbody>
-		<div class="center"><strong><h3>Payment Method {{ $index+1 }}</h3></strong>
+	<tbody class="card">
+		<div class="center card card-outline-primary"><strong><h3>Payment Method {{ $index+1 }}</h3></strong>
 			<span ng-hide="paymentMethodsCopy[$index].isCardEditable">
 			  <a class="glyphicon glyphicon-edit" href="#/customer-info" ng-click="enableCardEditor($index)"/>
 			</span>

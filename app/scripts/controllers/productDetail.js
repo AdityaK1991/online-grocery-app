@@ -6,6 +6,8 @@ angular.module('onlineGroceryStoreApp')
       'Karma'
     ];
 
+    $scope.pQty=10;
+
     $rootScope.isMenuVisible = false;
 
   });
