@@ -6,7 +6,9 @@
       'Karma'
     ];
   
-    $rootScope.isMenuVisible = false;
+    $rootScope.isMenuVisible = true;
+
+    $rootScope.isAdminMenuVisible = false;
 
  /* First Name */
 

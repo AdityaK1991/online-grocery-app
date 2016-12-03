@@ -1,9 +1,14 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-<div ng-controller="NavSideMenuCtrl">
+<!-- <div ng-controller="AdminNavSideMenuCtrl"> -->
 <div class="nav-side-menu">
-    <img src="images/yeoman.png" class="center-block"><div class="brand">Online Grocery Store
-</div>
+    <img src="images/yeoman.png" class="center-block">
+      <div class="brand">Online Grocery Store
+        <div class="center-block">
+          Admin
+        </div>
+    </div>
+    
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
   
         <div class="menu-list">
@@ -11,41 +16,42 @@
             <ul id="menu-content" class="menu-content collapse out">
                 <li>
                   <a href="#/">
-                  <i class="fa fa-dashboard fa-lg"></i> Popular Products
+                  <i class="fa fa-dashboard fa-lg"></i> Manage Products
                   </a>
                 </li>
 
                 
                 <li data-toggle="collapse" data-target="#service" class="collapsed">
-                  <a href="#/"><i class="fa fa-globe fa-lg"></i> Categories <span class="arrow"></span></a>
+                  <a href="#/"><i class="fa fa-globe fa-lg"></i> Manage Categories <!-- <span class="arrow"></span> --></a>
                 </li>  
-                <ul class="sub-menu collapse" id="service">
+                <!-- <ul class="sub-menu collapse" id="service">
                   <li>Vegetables</li>
                   <li>Beverages</li>
                   <li>Chocolates</li>
                   <li>Frozen Foods</li>
                   <li>Ice cream</li>
                   <li>Spices</li>
-                </ul>
+                </ul> -->
 
-                 <li>
-                  <a href="#/order-history">
-                  <i class="fa fa-dashboard fa-lg"></i> Order History
-                  </a>
-                </li> 
+               <li>
+                <a href="#/order-history">
+                <i class="fa fa-dashboard fa-lg"></i> Manage Orders
+                </a>
+               </li> 
 
                 <li>
-                  <a href="#/cart">
-                  <i class="fa fa-dashboard fa-lg"></i> Cart
+                  <a href="#/cart"> 
+                  <i class="fa fa-dashboard fa-lg"></i> Manage Warehouse Suppliers
                   <span class="center pull-right rounded-blue-background">{{itemsCount}}</span>
                   </a>
                 </li>
+
 
                  <li>
                   <a href="#/customer-info">
                   <i class="fa fa-user fa-lg"></i> Account Settings
                   </a>
-                  </li>
+                 </li>
 
                  <li>
                   <a href="#/login">
@@ -55,4 +61,4 @@
             </ul>
      </div>
 </div>
-</div>
+<!-- </div> -->

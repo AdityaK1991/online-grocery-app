@@ -24,7 +24,9 @@
     <!-- Add your site or application content here -->
 
     <div class="header">
-        <ng-include src="'views/navSideMenu.html'" ng-hide="isMenuVisible"></ng-include>
+        <ng-include src="'views/navSideMenu.html'" ng-show="isMenuVisible"></ng-include>
+        <ng-include src="'views/admin/adminNavSideMenu.html'" ng-show="isAdminMenuVisible"></ng-include>
+ 
 
     </div>
 
@@ -87,6 +89,7 @@
         <script src="scripts/controllers/orderHistory.js"></script>
         <script src="scripts/controllers/orderPayment.js"></script>
         <script src="scripts/controllers/cartItems.js"></script>
+        <script src="scripts/controllers/navSideMenu.js"></script>
         <script src="scripts/controllers/admin/adminProducts.js"></script>
         <script src="scripts/controllers/admin/adminManageProduct.js"></script>
         <script src="scripts/controllers/admin/adminOrders.js"></script>

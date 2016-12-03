@@ -6,6 +6,7 @@ angular.module('onlineGroceryStoreApp')
       'Karma'
     ];
 
-    $rootScope.isMenuVisible = true;
+    $rootScope.isMenuVisible = false;
+    $rootScope.isAdminMenuVisible = false;
 
   });

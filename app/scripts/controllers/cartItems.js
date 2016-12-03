@@ -6,7 +6,9 @@ angular.module('onlineGroceryStoreApp')
       'Karma'
     ];
 
-    $rootScope.isMenuVisible = false;
+    $rootScope.isMenuVisible = true;
+
+    $rootScope.isAdminMenuVisible = false;
 
 
     $scope.cartItems = [{id: 1, name: 'test1', qty:2, pricePerItem:50}, 

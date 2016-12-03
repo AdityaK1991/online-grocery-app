@@ -8,6 +8,8 @@ angular.module('onlineGroceryStoreApp')
 
     $scope.pQty=10;
 
-    $rootScope.isMenuVisible = false;
+    $rootScope.isMenuVisible = true;
+
+    $rootScope.isAdminMenuVisible = false;
 
   });

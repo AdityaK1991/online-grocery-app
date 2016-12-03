@@ -6,7 +6,9 @@ angular.module('onlineGroceryStoreApp')
       'Karma'
     ];
 
-    $rootScope.isMenuVisible = false;
+    $rootScope.isMenuVisible = true;
+    
+    $rootScope.isAdminMenuVisible = false;
 
     $scope.fName="name";
     $scope.lName="test";
