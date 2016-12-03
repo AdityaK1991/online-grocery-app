@@ -1,33 +1,23 @@
 <?php
-// we connect to example.com and port 3307
-$link = mysql_connect('fourier.cs.iit.edu:1521', 'smohan6', 'sanj#123');
-if (!$link) {
-    die('Could not connect: ' . mysql_error());
-}
-echo 'Connected successfully';
-mysql_close($link);
 
-// we connect to localhost at port 3307
-$link = mysql_connect('127.0.0.1:3307', 'mysql_user', 'mysql_password');
-if (!$link) {
-    die('Could not connect: ' . mysql_error());
+// Connects to the XE service (i.e. database) on the "localhost" machine
+$conn = oci_connect('smohan6', 'sanj#123', 'fourier.cs.iit.edu');
+if (!$conn) {
+    $e = oci_error();
+    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 }
-echo 'Connected successfully';
-mysql_close($link);
-?><?php
-// we connect to example.com and port 3307
-$link = mysql_connect('example.com:3307', 'mysql_user', 'mysql_password');
-if (!$link) {
-    die('Could not connect: ' . mysql_error());
-}
-echo 'Connected successfully';
-mysql_close($link);
 
-// we connect to localhost at port 3307
-$link = mysql_connect('127.0.0.1:3307', 'mysql_user', 'mysql_password');
-if (!$link) {
-    die('Could not connect: ' . mysql_error());
-}
-echo 'Connected successfully';
-mysql_close($link);
+// $stid = oci_parse($conn, 'SELECT * FROM employees');
+// oci_execute($stid);
+
+// echo "<table border='1'>\n";
+// while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+//     echo "<tr>\n";
+//     foreach ($row as $item) {
+//         echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+//     }
+//     echo "</tr>\n";
+// }
+// echo "</table>\n";
+
 ?>

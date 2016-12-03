@@ -2,43 +2,44 @@
 
 <!-- <ng-include src="'views/carousel.html'"> </ng-include> -->
 <div class="card">
-<div class="row">
-    <img class="card-image customHeight250 center-block" src="images/yeoman.png" alt="Product">
-</div>
-<h3><strong><div class="header center">Product name</div></strong></h3>
-
-<h4><p class="row greenColor center" ng-show="{{pQty > 0}}">This Product is in stock</p></h4>
-<h4><p class="row redColor center" ng-show="{{pQty === 0}}">This Product is out of stock</p></h4>
 
 <div class="row">
-  <div class="col-md-5">
-    <h4><strong><div class="title center">Price: ${{ pPrice }}</div></strong></h4>
-  </div>
-
-  <div class="center silverColor" ng-model="pQty" ng-if="pQty>0">Quantity left: {{ pQty }}</div>
-</div>
-
-<div class="center">
-    <h4><strong><span class="title center">Quantity:</span></strong></h4> 
-    <input type="number" ng-model="pCount" value="1" min="1" max="{{pQty}}">  
-</div><br>
-
-
-  <button class="btn btn-primary center-block" type="submit" ng-show="pQty > 0" ng-disabled="!pCount" ng-href="#/cart">Add to Cart</button>
-
     
+    <div class="col-md-5">
+        <img class="card-image customHeight250" src="images/yeoman.png" alt="Product">
+    </div>
 
-<div ng-show="pCount > pQty">Quantity cannot be more than {{pQty}}</div>
+    <div class="col-md-5 pull-right">
 
-<div class="title"><strong><h4>About the Product</h4></strong></div>
+      <h3><strong><div class="title">Product name</div></strong></h3>
 
-<ul>
-	<li>sdsdfsdfsfdsdf</li>
-	<li>sdsdfsdfsfdsdf</li>
-	<li>sdsdfsdfsfdsdf</li>
-	<li>sdsdfsdfsfdsdf</li>
-	<li>sdsdfsdfsfdsdf</li>
-	<li>sdsdfsdfsfdsdf</li>
-</ul>
+      <h4><p class="greenColor" ng-show="{{pQty > 0}}">This Product is in stock</p></h4>
+      <h4><p class="redColor" ng-show="{{pQty === 0}}">This Product is out of stock</p></h4>
+
+      <h4><strong><div class="title">Price: ${{ pPrice }}</div></strong></h4>
+ 
+      <div ng-model="pQty" ng-if="pQty>0"><h5><strong>Quantity left: {{ pQty }}</strong></h5></div>
+
+      <h4><strong><span class="title"><h4><strong>Quantity:</strong></h4></span></strong></h4> 
+      <input type="number" ng-model="pCount" value="1" min="1" max="{{pQty}}">  
+
+
+      <button class="btn btn-primary" type="submit" ng-show="pQty > 0" ng-disabled="!pCount" ng-href="#/cart">Add to Cart</button>
+
+      <div ng-show="pCount > pQty">Quantity cannot be more than {{pQty}}</div>
+
+      <div class="title"><strong><h4>About the Product</h4></strong></div>
+
+      <ul>
+        <li>sdsdfsdfsfdsdf</li>
+        <li>sdsdfsdfsfdsdf</li>
+        <li>sdsdfsdfsfdsdf</li>
+        <li>sdsdfsdfsfdsdf</li>
+        <li>sdsdfsdfsfdsdf</li>
+        <li>sdsdfsdfsfdsdf</li>
+      </ul>
+    </div>
 </div>
+
+
 </div>

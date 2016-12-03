@@ -10,14 +10,14 @@ angular.module('onlineGroceryStoreApp')
 
     $rootScope.isAdminMenuVisible = true;
     
-    $scope.isEditorProductDetailsEnabled = false;
+    $scope.isProductEditable = false;
 
-    $scope.enableProductDetailsEditor = function() {
-	    $scope.isEditorProductDetailsEnabled = true;    	
+    $scope.enableProductEditor = function() {
+	    $scope.isProductEditable = true;    	
     }
 
-    $scope.saveProductDetailsInfo = function() {
-	    $scope.isEditorProductDetailsEnabled = false;
+    $scope.saveProductInfo = function() {
+	    $scope.isProductEditable = false;
     }
 
   });

@@ -304,6 +304,14 @@ body {
   padding-right:10px; 
 }
 
+.paddingL100 {
+  padding-left:100px; 
+}
+
+.paddingL50 {
+  padding-left:50px; 
+}
+
 /* disable */
 .disabled {
   cursor: not-allowed; 
