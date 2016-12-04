@@ -9,11 +9,11 @@
 		
 		<div class="center card card-outline-primary whiteColor"><strong><h3>Account Details</h3></strong>
 			<span ng-hide="editorCustomerInfoEnabled">
-			  <a class="glyphicon glyphicon-edit whiteColor" href="#/customer-info" ng-click="enableCustomerInfoEditor()"/>
+			  <a class="glyphicon glyphicon-edit orangeColor" href="#/customer-info" ng-click="enableCustomerInfoEditor()"/>
 			</span>
 
 			<span ng-show="editorCustomerInfoEnabled">
-		  		<a class="glyphicon glyphicon-ok-circle whiteColor" href="#/customer-info" ng-class="{disabled: !editableFName || !editableLName || !editableAddressL1 || !editableAddressL2 || !editableCity || !editableState || !editableZip || !editableCountry || !editablePhone }" ng-click="saveCustomerInfo()"/>
+		  		<a class="glyphicon glyphicon-ok-circle greenColor" href="#/customer-info" ng-class="{disabled: !editableFName || !editableLName || !editableAddressL1 || !editableAddressL2 || !editableCity || !editableState || !editableZip || !editableCountry || !editablePhone }" ng-click="saveCustomerInfo()"/>
 			</span>
 		</div>
 
@@ -165,12 +165,12 @@
 	<tbody class="card">
 		<div class="center card card-outline-primary whiteColor"><strong><h3>Payment Method {{ $index+1 }}</h3></strong>
 			<span ng-hide="paymentMethodsCopy[$index].isCardEditable">
-			  <a class="glyphicon glyphicon-edit whiteColor" href="#/customer-info" ng-click="enableCardEditor($index)"/>
+			  <a class="glyphicon glyphicon-edit orangeColor" href="#/customer-info" ng-click="enableCardEditor($index)"/>
 			</span>
 
 			<span ng-show="paymentMethodsCopy[$index].isCardEditable">
-		  		<a class="glyphicon glyphicon-ok-circle whiteColor" href="#/customer-info" ng-class="{disabled: !paymentMethod.cardName || !paymentMethod.cardNumber || !paymentMethod.cardMM || !paymentMethod.cardYYYY}" ng-click="saveCardInfo($index)"/>
-		  		<a class="glyphicon glyphicon-remove-circle whiteColor" href="#/customer-info" ng-click="deleteCard($index)"/>
+		  		<a class="glyphicon glyphicon-ok-circle greenColor" href="#/customer-info" ng-class="{disabled: !paymentMethod.cardName || !paymentMethod.cardNumber || !paymentMethod.cardMM || !paymentMethod.cardYYYY}" ng-click="saveCardInfo($index)"/>
+		  		<a class="glyphicon glyphicon-remove-circle redColor" href="#/customer-info" ng-click="deleteCard($index)"/>
 			</span>
 		</div>
 		
@@ -220,6 +220,6 @@
 
 </div>
 <!-- </form> -->
-<button class="btn btn-primary center-block" ng-click="addPaymentMethod()">Add Payment Method</button>
+<button class="btn btn-primary center-block" ng-click="addPaymentMethod()"><span class="glyphicon glyphicon-plus-sign"/> Payment Method</button>
 
 </div>

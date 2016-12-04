@@ -74,10 +74,25 @@ angular
         controller: 'AdminProductsCtrl',
         controllerAs: 'adminProducts'
       })
+      .when('/admin/products/create', {
+        templateUrl: 'views/admin/adminAddProduct.html',
+        controller: 'AdminAddProductCtrl',
+        controllerAs: 'adminAddProduct'
+      })
       .when('/admin/products/:productId', {
         templateUrl: 'views/admin/adminManageProduct.html',
         controller: 'AdminManageProductCtrl',
         controllerAs: 'adminManageProduct'
+      })
+      .when('/admin/warehouses', {
+        templateUrl: 'views/admin/adminWarehousesList.html',
+        controller: 'AdminWarehousesListCtrl',
+        controllerAs: 'adminWarehousesList'
+      })
+      .when('/admin/warehouses/:warehouseId', {
+        templateUrl: 'views/admin/adminManageWarehouseSupplies.html',
+        controller: 'AdminManageWarehouseSuppliesCtrl',
+        controllerAs: 'adminManageWarehouseSupplies'
       })
       .when('/admin/orders', {
         templateUrl: 'views/admin/adminOrders.html',

@@ -102,6 +102,12 @@ body {
   margin-bottom:10px; 
 }
 
+/* custom margin */
+
+.marginLR5 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
   /* Side bar components */
 
   .nav-side-menu {
@@ -278,6 +284,9 @@ body {
   color: #708090;
 }
 
+.orangeColor {
+  color: orange;
+}
 
 .whiteColor {
   color: white;
@@ -299,6 +308,10 @@ body {
 }
 
 /* custom padding */
+.padding10 {
+  padding: 10px;
+}
+
 .paddingLR10 {
   padding-left:10px; 
   padding-right:10px; 
@@ -335,7 +348,9 @@ body {
 }
 
 
-
+.bg-primary {
+  background-color: #3a7ebf;
+}
 
 /* custom card */
 
@@ -356,6 +371,7 @@ body {
 .card-outline-primary {
   background-color: #3a7ebf;
 }
+
 
 .card-outline-blue {
   background-color: #3a7ebf;
@@ -425,6 +441,13 @@ body {
 
 .customHeight150 {
     height:150px;
+    background-color:#FFFFFF;
+    margin-top:10px;
+    overflow: hidden;
+}
+
+.customHeight100 {
+    height:100px;
     background-color:#FFFFFF;
     margin-top:10px;
     overflow: hidden;

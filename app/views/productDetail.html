@@ -6,7 +6,7 @@
 <div class="row">
     
     <div class="col-md-5">
-        <img class="card-image customHeight250" src="images/yeoman.png" alt="Product">
+        <img class="card-image customHeight250 center-block" src="images/yeoman.png" alt="Product">
     </div>
 
     <div class="col-md-5 pull-right">
@@ -24,11 +24,11 @@
       <input type="number" ng-model="pCount" value="1" min="1" max="{{pQty}}">  
 
 
-      <button class="btn btn-primary" type="submit" ng-show="pQty > 0" ng-disabled="!pCount" ng-href="#/cart">Add to Cart</button>
+      <button class="btn btn-primary" type="submit" ng-show="pQty > 0" ng-disabled="!pCount" ng-href="#/cart">Add to Cart</button><br><br>
 
       <div ng-show="pCount > pQty">Quantity cannot be more than {{pQty}}</div>
 
-      <div class="title"><strong><h4>About the Product</h4></strong></div>
+      <div><h4><strong>About the Product</strong></h4></div>
 
       <ul>
         <li>sdsdfsdfsfdsdf</li>
