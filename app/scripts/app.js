@@ -94,6 +94,11 @@ angular
         controller: 'AdminManageWarehouseSuppliesCtrl',
         controllerAs: 'adminManageWarehouseSupplies'
       })
+      .when('/admin/suppliers', {
+        templateUrl: 'views/admin/adminManageSuppliers.html',
+        controller: 'AdminManageSuppliersCtrl',
+        controllerAs: 'adminManageSuppliers'
+      })
       .when('/admin/orders', {
         templateUrl: 'views/admin/adminOrders.html',
         controller: 'AdminOrdersCtrl',
